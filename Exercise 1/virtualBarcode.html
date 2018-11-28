@@ -1,0 +1,41 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+    <title>The HTML5 Herald</title>
+    <meta name="description" content="The HTML5 Herald">
+    <meta name="author" content="SitePoint">
+    <link rel="stylesheet" href="css/virtualBarcode.css">
+
+</head>
+
+
+<body contenteditable="false">
+    <div class="topnav">
+        <a href="#">Link</a>
+        <a href="#">Link</a>
+        <a href="#">Link</a>
+    </div>
+    
+    <div class="content">
+        <form>
+            Virtual bar code: <input id='vbc' onchange = 'greyOut(event)' type='text' name='barCode' placeholder='Enter the virtual code here'><br>
+            <button class='prettyButton' type='button' onclick='processInformation(document.getElementById("vbc"))'>Decode</button>
+        </form>
+        <button class='buttonLeft'></button>
+    </div>
+    <div class='information'>
+            <div class='informationBox grid-container' id='dT'>
+                <p class ='grid-item'>Person's IBAN: </p>
+                <p class ='grid-item'>Amount to be paid: </p>
+                <p class ='grid-item'>Payment reference: </p>
+                <p class ='grid-item'>Due date: </p>
+
+            </div>
+
+        </div>
+  <script src="js/virtualBarcode.js"></script>
+</body>
+</html>
