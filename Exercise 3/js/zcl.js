@@ -2,7 +2,6 @@ function fetchData(url) {
     fetch(url)
     .then( (resp) => resp.json())
     .then ( data => {
-        // console.log(data)
         processData(data);
     })
     .catch( function() {
@@ -15,7 +14,6 @@ function createAPIurl(countryCode, postalCode){
     return url
 }
 function fetchAndProcess(countryCode, postalCode){
-    // console.log(createAPIurl(countryCode, postalCode));
     saveSearch(countryCode,postalCode)
     fetchData(createAPIurl(countryCode, postalCode))
 }
@@ -23,6 +21,17 @@ function processData(data){
     findOnMap(data.places[0].latitude, data.places[0].longitude)
 }
 
+function showBuses(){
+    
+}
+
+function refresh(){
+
+}
+
+function showRoute(){
+
+}
 function myMap() {
     var mapProp= {
         center:new google.maps.LatLng(51.508742,-0.120850),
@@ -39,9 +48,9 @@ function findOnMap(latitude, longitude) {
     
 }
 
-function saveSearch(country, pc){
-    localStorage.setItem(country, pc);
-}
+// function saveSearch(country, pc){
+//     localStorage.setItem(country, pc);
+// }
 function start(){
     myMap();
     // fetchCountries();
