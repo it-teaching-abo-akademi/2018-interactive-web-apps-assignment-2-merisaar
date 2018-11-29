@@ -76,3 +76,6 @@
     float: right;
     cursor: pointer;
 }
+.button-row { 
+    display:inline-block;
+  }
