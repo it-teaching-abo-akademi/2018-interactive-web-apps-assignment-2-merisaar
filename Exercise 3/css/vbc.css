@@ -37,8 +37,6 @@
   display: grid;
   grid-template-columns: auto auto;
   padding: 10px;
-  width:25%;
-  float:right;
 }
 .grid-item {
   padding: 5%;
@@ -77,10 +75,4 @@
     font-size: 14px;
     float: right;
     cursor: pointer;
-}
-.cookieTable {
-    border: 1px solid black;
-}
-.cookieTable th, .cookieTable td{
-    border: 1px solid black;    
 }

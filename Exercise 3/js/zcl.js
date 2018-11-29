@@ -6,7 +6,7 @@ function fetchData(url) {
         processData(data);
     })
     .catch( function() {
-        console.log('Not found.')
+        console.log('error')
     })
 }
 function createAPIurl(countryCode, postalCode){
@@ -14,25 +14,33 @@ function createAPIurl(countryCode, postalCode){
     return url
 }
 function fetchAndProcess(countryCode, postalCode){
-    console.log(countryCode, ' ', postalCode)
+    // console.log(createAPIurl(countryCode, postalCode));
     saveSearch(countryCode,postalCode)
-    url = createAPIurl(countryCode, postalCode)
-    fetchData(url)
+    fetchData(createAPIurl(countryCode, postalCode))
 }
 function processData(data){
-    console.log(data)
-    var table = document.getElementById('tableInfo')
-    console.log(table)
-    console.log(table.children[0])
-    var row = table.children[0].children[1];
-    console.log(row)
-    if(typeof data != 'undefined' || data != null){
-        row.children[0].innerHTML = data.country
-        row.children[1].innerHTML = data.places[0].longitude
-        row.children[2].innerHTML = data.places[0].latitude
-    }
     findOnMap(data.places[0].latitude, data.places[0].longitude)
 }
+// http://country.io/data/
+// function addCountriesToList(){
+//     var countryList = fetchCountries('https://api.printful.com/countries')
+//     console.log(countryList)
+//     var select = document.getElementById('countrySelect')
+//     console.log(select)
+//     // for(var i = 0; i<countryList.length; i++){
+//     //     select.append('<option value="' + countryVal + '">' + country + '</option>')
+//     // }
+// }
+// function fetchCountries(){
+//     fetch('datapackage.json')
+//     .then( (resp) => resp.json())
+//     .then ( data => {
+//         console.log(data)
+//     })
+//     .catch( function() {
+//         console.log('error on fetch countries')
+//     })
+// }
 function myMap() {
     var mapProp= {
         center:new google.maps.LatLng(51.508742,-0.120850),

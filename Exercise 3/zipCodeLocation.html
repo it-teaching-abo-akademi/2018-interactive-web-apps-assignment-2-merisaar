@@ -31,29 +31,17 @@
             ZIP code: <input id='zipCode'  type='text' name='barCode' placeholder='Enter the postal code here'><br>
             <button class='prettyButton' type='button' onclick='fetchAndProcess(document.getElementById("countrySelect").value, document.getElementById("zipCode").value)'>Search</button>
         </form>
-        <table id='tableInfo' class = 'cookieTable'>
-                <tbody><tr>
-                  <th>Place name</th>
-                  <th>Longitude</th>
-                  <th>Latitude</th>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    </tr>
-
-              </tbody></table>
-              <div class='informationBox grid-container' id='dT'>
-                    <p class ='grid-item'>Person's IBAN: </p>
-                    <p class ='grid-item'>Amount to be paid: </p>  </div>
+        <button class='buttonLeft'></button>
     </div>
-            
+            <div class='informationBox grid-container' id='dT'>
+                <!-- <p class ='grid-item'>Person's IBAN: </p>
+                <p class ='grid-item'>Amount to be paid: </p> -->
 
-                <div class='map'>
-                        <div id="googleMap" style="width:100%;height:400px;"></div>
-                    </div>
-          
+            </div>
+    </div>
+<div class='map'>
+        <div id="googleMap" style="width:100%;height:300px;"></div>
+
     </div>
   <script src="js/zcl.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyATB415_Tx7EYsmDE1XTEJc3CkGfAICJ0s&callback=myMap"></script>
