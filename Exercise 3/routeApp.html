@@ -7,7 +7,7 @@
     <title>The HTML5 Herald</title>
     <meta name="description" content="The HTML5 Herald">
     <meta name="author" content="SitePoint">
-    <link rel="stylesheet" href="css/vbc.css">
+    <link rel="stylesheet" href="css/routeApp.css">
 
 </head>
 
@@ -17,17 +17,16 @@
 <div class='information row'>
     <div class="content">
         <form>
-            ZIP code: <input id='zipCode'  type='text' name='barCode' placeholder='Enter the postal code here'><br>
-        </form>
+            Select the route: <select id='routeSelect' placeholder='Select country'>
+                <option>Select route</option>
+                <br>
+            </select>
+                </form>
     </div>
     <div class="button-row content btn-group">
-        <button class='informationBox col' type='button' onclick='showBuses()'>Show buses</button>
+        <button class='informationBox col' type='button' onclick='showBuses(routeSelect.value)'>Show buses</button>
         <button class='informationBox col' onclick='refresh()'>Refresh</button>
-        <button class='informationBox col' id='dT' onclick='showRoute()'>Show route</button>
-                <!-- <p class ='grid-item'>Person's IBAN: </p>
-                <p class ='grid-item'>Amount to be paid: </p> -->
-    </div>
-
+        <button class='informationBox col' id='dT' onclick='showRoute(routeSelect.value)'>Show route</button>
     </div>
 </div>
 <div class='map'>
