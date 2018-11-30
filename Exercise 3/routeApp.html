@@ -17,7 +17,7 @@
 <div class='information row'>
     <div class="content">
         <form>
-            Select the route: <select id='routeSelect' placeholder='Select country'>
+            Select the bus line: <select id='busLineSelect' placeholder='Select country'>
                 <option>Select route</option>
                 <br>
             </select>
@@ -26,7 +26,7 @@
     <div class="button-row content btn-group">
         <button class='informationBox col' type='button' onclick='showBuses(routeSelect.value)'>Show buses</button>
         <button class='informationBox col' onclick='refresh()'>Refresh</button>
-        <button class='informationBox col' id='dT' onclick='showRoute(routeSelect.value)'>Show route</button>
+        <button class='informationBox col' id='dT' onclick='showRoute(busLineSelect.value)'>Show route</button>
     </div>
 </div>
 <div class='map'>

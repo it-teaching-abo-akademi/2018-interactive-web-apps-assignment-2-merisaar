@@ -50,13 +50,33 @@ function showRoute(route){
         alert('Error')
     })
 }
-//Adds route IDs to dropdown list
+////Adds route IDs to dropdown list
+// function addToDropDown(){
+//     fetch('https://data.foli.fi/gtfs/routes')
+//     .then( (resp) => resp.json())
+//     .then ( data => {
+//         list = data;
+//         var r = document.getElementById('routeSelect')
+//         for(var i = 0; i<data.length; i++){
+//             var listObject = document.createElement('option')
+//             listObject.innerHTML = data[i].route_short_name
+//             listObject.value = data[i].route_id
+//             r.append(listObject)
+//         }
+//     })
+//     .catch( function() {
+//         console.log('error')
+//         alert('Error')
+//     })
+// }
+
+//Adds bus lines to dropdown list
 function addToDropDown(){
     fetch('https://data.foli.fi/gtfs/routes')
     .then( (resp) => resp.json())
     .then ( data => {
         list = data;
-        var r = document.getElementById('routeSelect')
+        var r = document.getElementById('busLineSelect')
         for(var i = 0; i<data.length; i++){
             var listObject = document.createElement('option')
             listObject.innerHTML = data[i].route_short_name
