@@ -15,12 +15,12 @@ function processInformation(vbcElement){
     }else{
         var IBAN = vc.substring(1,17)
         var total= vc.substring(17,25)
-        var RN = vc.substring(25,47)
+        total = clearAmountToBePaid(total)
+        var RN = vc.substring(25,48)
         var expiresRaw = vc.substring(vc.length-6,vc.length)
         var date = processDate(expiresRaw)
         RN = cleanString(RN)
-        console.log(RN)
-        total = cleanString(total)
+        console.log('process ', RN)
         var list = [IBAN, total, RN, date]
         setDatatoTable(document.getElementById('dT'), list)
         setBarCode(vc)
@@ -57,7 +57,14 @@ function setDatatoTable(table, list){
 function cleanString(raw){
     cData = parseInt(raw, 0)
     cData = '' + cData
+    console.log(cData)
     return cData
+}
+function clearAmountToBePaid(raw){
+    console.log(raw)
+    raw =(parseInt(raw, 0).toFixed(2)/100).toString()
+    console.log(raw)
+    return raw
 }
 //Toggles element hide
 function hide(event, element){
