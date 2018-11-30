@@ -73,7 +73,6 @@ function saveSearch(country, pc){
 //Sets searched list
 function setSearchedListToDiv(){
     var s =document.getElementById('searched').getElementsByTagName('ul')[0]
-    console.log(s)
     let number = (localStorage.getItem('latestId') === null) ? 0 : localStorage.getItem('latestId');
     console.log(number)
     for(var i = number; i>number-10 && i>=1; i--){
