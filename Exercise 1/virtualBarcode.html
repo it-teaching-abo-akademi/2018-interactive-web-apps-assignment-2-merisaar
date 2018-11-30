@@ -21,7 +21,7 @@
     
     <div class="content">
         <form>
-            Virtual bar code: <input id='vbc' onchange = 'greyOut(event)' type='text' name='barCode' placeholder='Enter the virtual code here'><br>
+            Virtual bar code: <input id='vbc' oninput = 'greyOut(event)' type='text' name='barCode' placeholder='Enter the virtual code here'><br>
             <button class='prettyButton' type='button' onclick='processInformation(document.getElementById("vbc"))'>Decode</button>
         </form>
         <button class='buttonLeft'></button>
@@ -34,8 +34,11 @@
                 <p class ='grid-item'>Due date: </p>
 
             </div>
-
-        </div>
+    <div id = 'bC' class = 'barCode'>
+        <svg id="barcode"></svg>
+    </div>
+    </div>
+    
   <script src="js/virtualBarcode.js"></script>
 </body>
 </html>
