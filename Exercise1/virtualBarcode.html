@@ -1,0 +1,41 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <meta charset="utf-8">
+
+    <title>The HTML5 Herald</title>
+    <meta name="description" content="The HTML5 Herald">
+    <meta name="author" content="SitePoint">
+    <link rel="stylesheet" href="css/virtualBarcode.css">
+
+</head>
+
+
+<body contenteditable="false" onload='onStart()'>
+    
+    <div class="content">
+        <form>
+            Virtual bar code: <input id='vbc' oninput = 'greyOut(event)' type='text' name='barCode' placeholder='Enter the virtual code here'><br>
+        </form>
+        <button class='prettyButton' type='button' onclick='processInformation(document.getElementById("vbc"))'>Decode</button>
+        <button id ='toggleButton' class='buttonLeft' >Hide</button>
+    </div>
+    <div id='informationBox' class='information'>
+            <div class='informationBox grid-container' id='dT'>
+                <p class ='grid-item'>Person's IBAN: </p>
+                <p class ='grid-item'>Amount to be paid: </p>
+                <p class ='grid-item'>Payment reference: </p>
+                <p class ='grid-item'>Due date: </p>
+
+            </div>
+    <div id = 'bC' class = 'barCode'>
+        <svg id="barcode"></svg>
+    </div>
+    </div>
+    
+  <script src="js/virtualBarcode.js"></script>
+  <script src="JsBarcode.all.min.js"></script>
+</body>
+</html>

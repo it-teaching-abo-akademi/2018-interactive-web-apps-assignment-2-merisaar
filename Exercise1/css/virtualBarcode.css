@@ -1,0 +1,85 @@
+/* Style the top navigation bar */
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+}
+
+/* Style the topnav links */
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Style the content */
+.content {
+    background-color: #ddd;
+    padding: 10px;
+}
+
+/* Style the content */
+.information {
+    background-color: white;
+    border: solid black 2px;
+    padding: 10px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  padding: 10px;
+}
+.grid-item {
+  padding: 5%;
+  font-size: 16px;
+  /* text-align: center; */
+}
+/* Style the footer */
+.footer {
+    background-color: #f1f1f1;
+    padding: 10px;
+}
+
+.prettyButton {
+    background-color: grey;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin-left:12%;
+    margin-top: 10px;
+    margin-bottom:5px;
+    /* margin: 7px 2px; */
+    cursor: pointer;
+}
+.buttonLeft {
+    background-color: grey;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+    float: right;
+    cursor: pointer;
+}
+.information .barCode {
+    margin: 0 auto
+}
+.barCode svg {
+    width: 100%;
+
+}
