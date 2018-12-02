@@ -42,6 +42,7 @@ function processData(data){
         for(var i = 0; i<3; i++){
             row.children[i].innerHTML = ''
         }
+        alert('Not found')
     }
    
 }
