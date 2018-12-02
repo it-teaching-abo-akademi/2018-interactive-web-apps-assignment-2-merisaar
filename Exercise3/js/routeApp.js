@@ -3,7 +3,7 @@ var list = [];
 //Shows all buses on the route
 function showBuses(route){
     route = route.split(',')[1]
-    var url = 'http://data.foli.fi/siri/vm'
+    var url = 'https://data.foli.fi/siri/vm'
     fetch(url)
     .then( (resp) => resp.json())
     .then ( data => {
@@ -26,12 +26,12 @@ function refresh(){
 //Shows bus route
 function showRoute(route){
     route = route.split(',')[0]
-    var url = 'http://data.foli.fi/gtfs/trips/route/' + route
+    var url = 'https://data.foli.fi/gtfs/trips/route/' + route
     fetch(url)
     .then( (resp) => resp.json())
     .then ( data => {
         shape = data[data.length-1].shape_id
-        fetch('http://data.foli.fi/gtfs/shapes/' + shape)
+        fetch('https://data.foli.fi/gtfs/shapes/' + shape)
         .then( (resp) => resp.json())
         .then ( d => {
              drawRouteOnMap(d)
