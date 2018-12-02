@@ -87,15 +87,18 @@ function makeNumberSeries(raw){
     }
     return series
 }
-//Toggles element hide
-function hide(event, element){
-    if (element.style.display === "none") {
-        // element.style.display = "block";
-        $(element).slideUp()
-        event.target.innerHTML = 'Hide'
-    } else {
-        // element.style.display = "none";
-        $(element).slideDown()
-        event.target.innerHTML = 'Show'
-    }
+
+//Toggles element hide (Event listener in JQuery)
+function toggleHide(){
+    $('#toggleButton').click(function(){
+        $('#informationBox').slideToggle(); 
+        var text = $('#toggleButton').text()        
+        $('#toggleButton').text(
+            text == 'Show'? "Hide": "Show")
+    })
+}
+
+//Runs these functions when page loads 
+function onStart(){
+    toggleHide();
 }
