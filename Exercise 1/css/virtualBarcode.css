@@ -76,3 +76,10 @@
     float: right;
     cursor: pointer;
 }
+.information .barCode {
+    margin: 0 auto
+}
+.barCode svg {
+    width: 100%;
+
+}

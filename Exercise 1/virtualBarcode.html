@@ -2,6 +2,7 @@
 
 <html lang="en">
 <head>
+    <script src="jquery-3.3.1.min.js"></script>
   <meta charset="utf-8">
 
     <title>The HTML5 Herald</title>
@@ -13,20 +14,15 @@
 
 
 <body contenteditable="false">
-    <div class="topnav">
-        <a href="#">Link</a>
-        <a href="#">Link</a>
-        <a href="#">Link</a>
-    </div>
     
     <div class="content">
         <form>
-            Virtual bar code: <input id='vbc' onchange = 'greyOut(event)' type='text' name='barCode' placeholder='Enter the virtual code here'><br>
-            <button class='prettyButton' type='button' onclick='processInformation(document.getElementById("vbc"))'>Decode</button>
+            Virtual bar code: <input id='vbc' oninput = 'greyOut(event)' type='text' name='barCode' placeholder='Enter the virtual code here'><br>
         </form>
-        <button class='buttonLeft'></button>
+        <button class='prettyButton' type='button' onclick='processInformation(document.getElementById("vbc"))'>Decode</button>
+        <button class='buttonLeft' onclick='hide(event, informationBox)'>Hide</button>
     </div>
-    <div class='information'>
+    <div id='informationBox' class='information'>
             <div class='informationBox grid-container' id='dT'>
                 <p class ='grid-item'>Person's IBAN: </p>
                 <p class ='grid-item'>Amount to be paid: </p>
@@ -34,8 +30,12 @@
                 <p class ='grid-item'>Due date: </p>
 
             </div>
-
-        </div>
+    <div id = 'bC' class = 'barCode'>
+        <svg id="barcode"></svg>
+    </div>
+    </div>
+    
   <script src="js/virtualBarcode.js"></script>
+  <script src="JsBarcode.all.min.js"></script>
 </body>
 </html>
